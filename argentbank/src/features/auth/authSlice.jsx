@@ -15,9 +15,13 @@ export const authenticateUser = createAsyncThunk(
       const data = await response.json();
       if (!response.ok) {
         if (response.status === 401) {
+          
           throw new Error('Password is invalid');
+        } else if (response.status === 404) {
+          
+          throw new Error('User not found');
         } else {
-          throw new Error(data.message || 'La connexion a échoué.');
+          throw new Error(data.message || 'Connexion fail.');
         }
       }
       localStorage.setItem('token', data.body.token);
@@ -42,7 +46,6 @@ export const fetchUserProfile = createAsyncThunk(
         },
       });
       const data = await response.json();
-      console.log(data)
       if (!response.ok) throw new Error(data.message || 'Impossible de récupérer le profil.');
       return data.body;
     } catch (error) {

@@ -37,15 +37,15 @@ const UserPage = () => {
             <form onSubmit={handleSubmit}>
               <h2>Edit user info</h2>
               <div className="form-row">
-              <label For="username">Username:</label>
+              <label htmlFor="username">Username:</label>
               <input id="username" type="text" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
               </div>
               <div className="form-row">
-              <label For="firstname">Firstname:</label>
+              <label htmlFor="firstname">Firstname:</label>
               <input id="firstname" type="text" value={userProfile ? userProfile.firstName : ''} disabled />
               </div>
               <div className="form-row">
-              <label For="lastName">LastName:</label>
+              <label htmlFor="lastName">LastName:</label>
               <input id="lastName" type="text" value={userProfile ? userProfile.lastName : ''} disabled />
               </div>
               <div className="form-row">

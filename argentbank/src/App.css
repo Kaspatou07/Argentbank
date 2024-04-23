@@ -111,7 +111,7 @@ form input {
 }
 
 .hero {
-  background-image: url('./img/bank-tree.jpeg');
+  background-image: url('./img/bank-tree.webp');
   background-position: 0 -50px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -154,6 +154,7 @@ form input {
   border-color: #42b983;
   background-color: #42b983;
   color: #fff;
+  border-radius: 5px;
 }
 
 @media (min-width: 920px) {
@@ -274,9 +275,10 @@ form input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #1c1c1c;
-  background-color: #1c1c1c;
+  border: 1px solid #353535;
+  background-color: #353535;
   width: 80%;
+  border-radius: 5px;
   margin: 0 auto;
   flex-direction: column;
   padding: 1.5rem;

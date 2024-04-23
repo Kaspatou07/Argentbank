@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout, fetchUserProfile, toggleEditMode } from '../features/auth/authSlice'; 
-import argentBankLogo from '../img/argentBankLogo.png'; 
+import argentBankLogo from '../img/argentBankLogo.webp'; 
 import '../App.css';
 
 function Navbar() {
@@ -40,10 +40,10 @@ function Navbar() {
             
             <Link className="main-nav-item" to="/Userpage">
               <span>{userProfile ? userProfile.userName : 'Loading...'}</span>
-              <i className="fa fa-user-circle fa-3x"></i>
+              <i className="fa fa-user-circle fa-2x"></i>
             </Link>
             <div className="main-nav-item" onClick={() => dispatch(toggleEditMode())} style={{ cursor: 'pointer' }}>
-            <i className="fa fa-gear fa-3x"></i>
+            <i className="fa fa-gear fa-2x"></i>
           </div>
           </>
         ) : null}
@@ -53,7 +53,7 @@ function Navbar() {
           </Link>
         ) : (
           <div className="main-nav-item" onClick={handleLogout} style={{ cursor: 'pointer' }}>
-            <i className="fa fa-power-off fa-3x"></i>
+            <i className="fa fa-power-off fa-2x"></i>
           </div>
         )}
       </div>
